@@ -1,0 +1,12 @@
+name: Output issue
+on:
+  issues:
+    type: 
+    - opened
+jobs:
+  iss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display issues
+        run: echo "${{ toJSON(github) }}"
+  
